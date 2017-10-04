@@ -155,6 +155,42 @@ void DCMotorBot::turnRight() {
 }
 
 /**
+ * Pivot Left
+ */
+void DCMotorBot::pivotLeft() {
+    digitalWrite(mE1, LOW);
+    digitalWrite(mE2, LOW);
+
+    delay(mDelay);
+
+    digitalWrite(mE1, HIGH);
+    digitalWrite(mE2, HIGH);
+
+    digitalWrite(mI1, LOW);
+    digitalWrite(mI2, HIGH);
+    digitalWrite(mI3, HIGH);
+    digitalWrite(mI4, LOW);
+}
+
+/**
+ * Pivot Right
+ */
+void DCMotorBot::pivotRight() {
+    digitalWrite(mE1, LOW);
+    digitalWrite(mE2, LOW);
+
+    delay(mDelay);
+
+    digitalWrite(mE1, HIGH);
+    digitalWrite(mE2, HIGH);
+
+    digitalWrite(mI1, HIGH);
+    digitalWrite(mI2, LOW);
+    digitalWrite(mI3, LOW);
+    digitalWrite(mI4, HIGH);
+}
+
+/**
  * Stop Bot
  */
 void DCMotorBot::stop() {

@@ -22,7 +22,7 @@
 
 #if ARDUINO >= 100
     #include "Arduino.h"
-#else    
+#else
     #include "WProgram.h"
 #endif
 
@@ -45,6 +45,8 @@ public:
     void moveBackward();
     void turnLeft();
     void turnRight();
+    void pivotLeft();
+    void pivotRight();
     void stop();
 
     // movement functions for front steering
